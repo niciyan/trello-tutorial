@@ -5,7 +5,7 @@ interface Props {
 }
 
 const OrganizationIdPage = ({ params }: Props) => {
-  return <div>{params.organizationId}</div>;
+  return <div>organization: {params.organizationId}</div>;
 };
 
 export default OrganizationIdPage;
