@@ -15,6 +15,7 @@ import { FormSubmit } from "./form-submit";
 import { Button } from "../ui/button";
 import { X } from "lucide-react";
 import { toast } from "sonner";
+import { FormPicker } from "./form-picker";
 
 interface FormPopoverProps {
   children: React.ReactNode;
@@ -42,7 +43,10 @@ export const FormPopover = ({
 
   const onSubmit = (formData: FormData) => {
     const title = formData.get("title") as string;
-    execute({ title });
+    const image = formData.get("image") as string;
+
+    console.log({ image });
+    // execute({ title });
   };
   return (
     <Popover>
@@ -66,6 +70,7 @@ export const FormPopover = ({
         </PopoverClose>
         <form className="space-y-4" action={onSubmit}>
           <div className="space-y-4">
+            <FormPicker id="image" errors={fieldErrors} />
             <FormInput
               id="title"
               label="Board title"
