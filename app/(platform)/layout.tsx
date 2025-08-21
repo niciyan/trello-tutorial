@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export default function PlatformLayout({
@@ -7,7 +8,10 @@ export default function PlatformLayout({
 }) {
   return (
     <section className="h-full">
-      <ClerkProvider>{children}</ClerkProvider>
+      <ClerkProvider>
+        <Toaster />
+        {children}
+      </ClerkProvider>
     </section>
   );
 }
