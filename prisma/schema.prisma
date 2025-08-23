@@ -19,7 +19,7 @@ model Board {
   orgId         String
   title         String
   imageId       String
-  imageThumUrl  String @db.Text
+  imageThumbUrl String @db.Text
   imageFullUrl  String @db.Text
   imageUserName String @db.Text
   imageLinkHTML String @db.Text
