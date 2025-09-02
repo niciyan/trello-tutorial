@@ -8,7 +8,9 @@ export const UpdateCard = z.object({
       .min(3, { message: "minimum length is 3." })
   ),
   title: z.optional(
-    z.string("title is required.").min(3, { message: "minimum length is 3." })
+    z.optional(
+      z.string("title is required.").min(3, { message: "minimum length is 3." })
+    )
   ),
   id: z.string(),
 });
